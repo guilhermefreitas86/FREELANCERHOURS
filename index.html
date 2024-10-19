@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreelancerHours</title>
+    <link rel="icon" href="LOGOABA.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0d1d2e;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Layout geral - Dividindo em 3 colunas */
+        .container {
+            background-color: #ffffffb3;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+        }
+
+        /* Estiliza as colunas */
+        .left,
+        .center,
+        .right {
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 30%;
+        }
+
+        /* Estiliza o formulário */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin-bottom: 10px;
+        }
+
+        form input {
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            width: 95%;
+            /* Aumenta a largura para 100% do container */
+        }
+
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        /* Estiliza a lista de usuários */
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .user-info img {
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        /* Estilo para centralizar a logo e definir o tamanho */
+        #LOGO {
+            display: block;
+            margin: 20px auto;
+            /* Centraliza horizontalmente */
+            width: 300px;
+            /* Largura média */
+            height: auto;
+            /* Mantém a proporção da imagem */
+        }
+
+        h1 {
+            color: #000000;
+            text-align: center;
+            font-size: 20px;
+            /* ajuste o valor conforme necessário */
+        }
+
+        h2 {
+            color: #000000;
+            text-align: center;
+            font-size: 20px;
+            /* ajuste o valor conforme necessário */
+        }
+
+        h3 {
+            color: #000000;
+            text-align: center;
+            font-size: 20px;
+            /* ajuste o valor conforme necessário */
+        }
+
+        .texto-extra-pequeno {
+            font-size: 9px;
+            /* Altere o tamanho conforme necessário */
+        }
+
+        .texto-pequeno {
+            font-size: 12px;
+            /* Altere o tamanho conforme necessário */
+        }
+
+        .texto-medio {
+            font-size: 16px;
+            /* Altere o tamanho conforme necessário */
+        }
+
+        .texto-grande {
+            font-size: 18px;
+            /* Altere o tamanho conforme necessário */
+        }
+
+        .texto-extra-grande {
+            font-size: 23px;
+            /* Altere o tamanho conforme necessário */
+        }
+
+        .user-list {
+            height: 600px;
+            /* Defina a altura que deseja para o contêiner */
+            overflow-y: auto;
+            /* Habilita a rolagem vertical */
+            /* border: 1px solid #ccc; */
+            /* Opcional: borda para visualização */
+            padding: 10px;
+            /* Opcional: espaçamento interno */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Logo Centralizada -->
+    <div class="logo-container">
+        <img id="LOGO" src="LOGO.png" alt="Logo FreelancerHours">
+    </div>
+
+    <div class="container">
+        <!-- Lado Esquerdo -->
+        <div class="left">
+            <h2>LANDING PAGE PARA PET SHOP</h2>
+            <label class="texto-pequeno" for="nome">Publicado há 6 horas | Proposta encerra em: <span
+                    id="contagem-regressiva">5:00:00</span></label><br><br>
+
+            <p>Criar uma Landing Page atraente e funcional para um Pet Shop, com o intuito de aumentar a captação de
+                clientes e promover produtos e serviços oferecidos.</p>
+
+            <strong>Características da Landing Page:</strong>
+            <ul>
+                <li>Design Atraente</li>
+            </ul>
+            <strong>Seções Principais:</strong>
+            <ul>
+                <li>Apresentação do Pet Shop</li>
+                <li>Produtos e Serviços</li>
+                <li>Promoções e Ofertas</li>
+                <li>Depoimentos de Clientes</li>
+                <li>Formulário de Contato</li>
+                <li>Call to Action (CTA)</li>
+                <li>Otimização para SEO</li>
+                <li>Responsividade</li>
+                <li>Integração com Redes Sociais</li>
+            </ul>
+            <strong>Benefícios Esperados:</strong>
+            <ul>
+                <li>Aumento da taxa de conversão de visitantes em clientes</li>
+                <li>Melhora na visibilidade online e na presença da marca nas redes sociais</li>
+                <li>Fidelização de clientes por meio de promoções e comunicação eficaz</li>
+            </ul>
+        </div>
+
+        <!-- Centro - Formulário -->
+        <div class="center">
+            <h2>INSIRA SUAS INFORMAÇÕES</h2>
+            <br>
+            <form id="userForm">
+                <label>Nome: <input type="text" id="name" required placeholder="Digite seu nome."></label>
+                <label>E-mail: <input type="email" id="email" required placeholder="Digite seu e-mail."></label>
+                <label>Horas Estimadas: <input type="number" id="hours" required
+                        placeholder="Quantas horas você levaria para realizar a proposta?"></label>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <!-- Lado Direito - Usuários Registrados -->
+        <div class="right">
+            <h2>USUÁRIOS REGISTRADOS</h2>
+            <div id="userList" class="user-list"></div>
+        </div>
+    </div>
+
+    <script>
+        // Define o tempo total de 5 horas em segundos
+        let totalSeconds = 5 * 60 * 60;
+
+        // Seleciona o elemento do contador de tempo
+        const countdownElement = document.getElementById('contagem-regressiva');
+
+        // Função para atualizar o contador a cada segundo
+        const countdown = setInterval(() => {
+            const hours = Math.floor(totalSeconds / 3600);
+            const minutes = Math.floor((totalSeconds % 3600) / 60);
+            const seconds = totalSeconds % 60;
+
+            // Atualiza o texto do elemento com o tempo formatado
+            countdownElement.textContent =
+                `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+            totalSeconds--;
+
+            // Quando o tempo acabar, encerra o contador e mostra a mensagem "Encerrado"
+            if (totalSeconds < 0) {
+                clearInterval(countdown);
+                countdownElement.textContent = "Encerrado!";
+            }
+        }, 1000);
+
+        // Função para manipular o formulário de envio de usuários
+        document.getElementById('userForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const hours = document.getElementById('hours').value;
+
+        // Gera uma imagem de perfil baseada no nome usando a API RoboHash
+        const profilePic = `https://robohash.org/${encodeURIComponent(name)}.png`;
+
+        const userList = document.getElementById('userList');
+
+        // Verifica se o usuário já está na lista
+        const existingUserDiv = Array.from(userList.children).find(userDiv => {
+            const userName = userDiv.querySelector('p strong').nextSibling.textContent.trim();
+            return userName === name;
+        });
+
+        if (existingUserDiv) {
+            // Remove o usuário existente
+            userList.removeChild(existingUserDiv);
+        }
+
+        // Cria um novo div para o usuário
+        const userDiv = document.createElement('div');
+        userDiv.classList.add('user-info');
+
+        userDiv.innerHTML = `
+            <img src="${profilePic}" alt="Profile Picture" width="50" height="50">
+            <div>
+                <p><strong>Nome:</strong> ${name}</p>
+                <p><strong>E-mail:</strong> ${email}</p>
+                <p><strong>Horas Estimadas:</strong> ${hours} hora(s)</p>
+            </div>
+        `;
+
+        userList.appendChild(userDiv);
+
+        // Limpa os campos de input
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("hours").value = "";
+        });
+
+    </script>
+
+</body>
+</html>
